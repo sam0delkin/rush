@@ -17,7 +17,9 @@ go:
 cache: miniconda3
 
 addons:
-  artifacts: true
+  artifacts:
+    paths:
+      - binaries/*
 
 before_install:
   - if [[ $TRAVIS_OS_NAME = "linux" && $TRAVIS_CPU_ARCH = "arm64" ]]; then wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh -O miniconda.sh; fi;
