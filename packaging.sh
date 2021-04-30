@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+go get github.com/mitchellh/gox
 # https://github.com/mitchellh/gox
 CGO_ENABLED=0 gox -osarch="windows/amd64 darwin/amd64 linux/amd64 linux/arm" -tags netgo -ldflags '-w -s'
 
